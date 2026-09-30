@@ -1,0 +1,28 @@
+۷_برنامه مثال ٦-١٥ را طوری تغییر دهید که مقدار true را برگرداند اگر و فقط اگر آرایه غیر صعودی باشد.
+
+پاسخ:
+#include<iostream.h>
+
+bool isNonincreasing(int a[], int n);
+
+int main()
+{
+    int a[] = {88, 66, 66, 44, 22, 11, 11};
+
+    cout << "isNonincreasing(a,4) = "
+         << isNonincreasing(a,4) << endl;
+
+    cout << "isNonincreasing(a,7) = "
+         << isNonincreasing(a,7) << endl;
+
+    return 0;
+}
+
+bool isNonincreasing(int a[], int n)
+{
+    for(int i = 1; i < n; i++)
+        if(a[i] > a[i-1])
+            return false;
+
+    return true;
+}
